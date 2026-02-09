@@ -1,0 +1,26 @@
+export function HeartRight() {
+  return (
+    <svg
+      width="19"
+      height="19"
+      viewBox="0 0 19 19"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.12891 9.03076H16.933"
+        stroke="currentColor"
+        strokeWidth="2.25773"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.03125 1.12891L16.9333 9.03097L9.03125 16.933"
+        stroke="currentColor"
+        strokeWidth="2.25773"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}

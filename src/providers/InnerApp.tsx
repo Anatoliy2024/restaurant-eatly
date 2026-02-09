@@ -1,0 +1,22 @@
+// import { Footer } from "@/components/Footer/Footer"
+import { Header } from "@/components/Header/Header"
+
+export default function InnerApp({
+  children,
+}: {
+  children: React.ReactNode
+  hiddenCatalog?: boolean
+}) {
+  return (
+    <div>
+      <Header />
+      <div>{children}</div>
+      {/* <Footer /> */}
+    </div>
+    // <div className="innerAppContainer">
+    //   <Header />
+    //   <div className="innerAppContainer__contentPage">{children}</div>
+    //   {/* <Footer /> */}
+    // </div>
+  )
+}
