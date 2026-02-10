@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9f9f9;
+  --background-grey: #f9f9f9;
   --color-violet: #6c5fbc;
   --color-violet-two: #5c4eae;
   --color-violet-three: #a596ff;
@@ -24,4 +24,12 @@
   --fs-title-lg: clamp(3rem, 2.3rem + 1.6vw, 4.375rem); /* 48 - 70 */
   --fs-hero: clamp(3.25rem, 2.5rem + 1.8vw, 4.75rem); /* 52 - 76 */
   /* 10 14  16 18 20 22px 24 26 28  44 50 70 76px   1440px  */
+}
+
+.innerAppContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: var(--background-grey);
+}
+.innerAppContainer__contentPage {
 }

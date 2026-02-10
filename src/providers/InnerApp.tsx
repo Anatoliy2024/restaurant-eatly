@@ -8,15 +8,15 @@ export default function InnerApp({
   hiddenCatalog?: boolean
 }) {
   return (
-    <div>
-      <Header />
-      <div>{children}</div>
-      {/* <Footer /> */}
-    </div>
-    // <div className="innerAppContainer">
+    // <div>
     //   <Header />
-    //   <div className="innerAppContainer__contentPage">{children}</div>
+    //   <div>{children}</div>
     //   {/* <Footer /> */}
     // </div>
+    <div className="innerAppContainer">
+      <Header />
+      <div className="innerAppContainer__contentPage">{children}</div>
+      {/* <Footer /> */}
+    </div>
   )
 }
