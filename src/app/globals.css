@@ -2,12 +2,16 @@
 
 :root {
   --background-grey: #f9f9f9;
+  --color-white: #ffffff;
   --color-violet: #6c5fbc;
   --color-violet-two: #5c4eae;
   --color-violet-three: #a596ff;
   --color-violet-four: #5c4eae;
   --color-violet-five: #1c186c;
   --color-grey: #969696;
+  --color-grey-two: #cbcbcb;
+  --color-grey-three: #201f1f33;
+  --color-grey-four: #676767;
 
   --fs-xs: clamp(0.625rem, 0.55rem + 0.3vw, 0.875rem); /* 10 - 14 */
   --fs-sm: clamp(0.75rem, 0.7rem + 0.35vw, 1rem); /* 12 - 16 */
@@ -30,6 +34,7 @@
   max-width: 1440px;
   margin: 0 auto;
   background: var(--background-grey);
+  font-family: var(--font-inter), sans-serif;
 }
 .innerAppContainer__contentPage {
 }

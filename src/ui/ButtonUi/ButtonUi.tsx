@@ -10,13 +10,11 @@ export function ButtonUi({
   href?: string
 }) {
   return (
-    <button>
-      <Link
-        className={`${style.buttonUi}  ${type ? style[type] : ""}`}
-        href={href ? href : "#"}
-      >
-        {text}
-      </Link>
-    </button>
+    <Link
+      className={`${style.buttonUi}  ${type ? style[type] : ""}`}
+      href={href ? href : "#"}
+    >
+      {text}
+    </Link>
   )
 }
