@@ -13,12 +13,12 @@ export function Enjoy() {
       <div className={style.enjoy__content}>
         <div className={style.enjoy__hash}>OVER 1000 USERS</div>
         <h2 className={style.enjoy__title}>
-          Enjoy Foods All Over The <span>World</span>
+          Enjoy Foods All Over The <span className="violetColor">World</span>
         </h2>
         <p className={style.enjoy__text}>
           EatLy help you set saving goals, earn cash back offers, Go to
           disclaimer for more details and get paychecks up to two days early.
-          Get a <span>$20 bonus</span>.
+          Get a <span className="violetColor">$20 bonus</span>.
         </p>
         <div className={style.enjoy__buttons}>
           <ButtonUi text="Get Started" href="#" type="violet" />

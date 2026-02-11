@@ -1,0 +1,79 @@
+$point: 650px;
+
+.dignity {
+  display: flex;
+  max-width: calc(1246px + 40px);
+  margin: 0 auto;
+  padding: clamp(20px, 7vw, 100px) 20px clamp(20px, 8vw, 120px);
+  column-gap: 70px;
+  row-gap: 20px;
+  overflow: hidden;
+
+  //   min-height: 745px;
+
+  @media (max-width: $point) {
+    display: block;
+    // flex-direction: column;
+    // min-height: 1100px;
+  }
+
+  &__imageContainer {
+    flex: 1 1 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $point) {
+      width: 100%;
+      padding: 0 50px;
+    }
+  }
+  &__imageWrapper {
+    position: relative;
+  }
+  &__VectorThreeWrapper {
+    position: absolute;
+    top: -15px;
+    right: -67px;
+  }
+  &__content {
+    flex: 1 1 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    // justify-content: flex-start;
+
+    flex-direction: column;
+    max-width: 545px;
+
+    @media (max-width: $point) {
+      width: 100%;
+      //   max-width: 100%;
+    }
+    h2 {
+      font-size: var(--fs-title-md);
+      font-weight: bold;
+      line-height: 58.2px;
+      padding-bottom: clamp(20px, 4vw, 63px);
+    }
+    ul {
+      color: var(--color-grey-four);
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-bottom: clamp(20px, 4vw, 63px);
+    }
+  }
+  &__buttonWrapper {
+    justify-self: start;
+    padding-bottom: 5px;
+
+    position: relative;
+  }
+  &__arrowWrapper {
+    position: absolute;
+    top: 30%;
+    left: 120px;
+    margin-top: 10px;
+  }
+}

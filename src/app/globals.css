@@ -8,6 +8,7 @@
   --color-violet-three: #a596ff;
   --color-violet-four: #5c4eae;
   --color-violet-five: #1c186c;
+  --color-violet-six: #c5bfed;
   --color-grey: #969696;
   --color-grey-two: #cbcbcb;
   --color-grey-three: #201f1f33;
@@ -37,4 +38,7 @@
   font-family: var(--font-inter), sans-serif;
 }
 .innerAppContainer__contentPage {
+}
+.violetColor {
+  color: var(--color-violet);
 }

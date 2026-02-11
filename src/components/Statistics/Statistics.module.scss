@@ -1,0 +1,49 @@
+.statistics {
+  padding: clamp(20px, 4vw, 54px) 0;
+  background: var(--color-violet);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 220px;
+  &__content {
+    display: flex;
+    // height: 100%;
+    // flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+  }
+  &__col {
+    padding: 0 clamp(10px, 4vw, 60px);
+    // border-right: 1px solid #c5c5c557;
+    text-align: center;
+
+    h3 {
+      color: var(--color-white);
+      font-family: var(--font-public-sans);
+      padding-bottom: 10px;
+      font-size: var(--fs-title-sm);
+      font-weight: bold;
+    }
+    p {
+      color: var(--color-violet-six);
+
+      font-size: var(--fs-xs);
+    }
+  }
+  &__col:not(:last-child) {
+    border-right: 1px solid #c5c5c557;
+  }
+
+  &__vectorFour {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__vectorFive {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

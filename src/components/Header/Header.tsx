@@ -5,11 +5,11 @@ import Link from "next/link"
 import { ButtonUi } from "@/ui/ButtonUi/ButtonUi"
 export function Header() {
   return (
-    <section className={style.header}>
+    <header className={style.header}>
       <div className={style.header__content}>
         <div className={style.header__logo}>
           <Logo />
-          <div>eatly</div>
+          <span className="violetColor">eatly</span>
         </div>
 
         <div className={style.header__main}>
@@ -28,6 +28,6 @@ export function Header() {
         </div>
       </div>
       <hr className={style.header__separator} />
-    </section>
+    </header>
   )
 }

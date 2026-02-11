@@ -1,8 +1,10 @@
 .header {
-  max-width: 1248px;
+  max-width: calc(1246px + 40px);
+
+  // max-width: 1248px;
   margin: 0 auto;
   &__content {
-    padding: clamp(20px, 3vw, 48px) 0 clamp(10px, 1vw, 24px);
+    padding: clamp(20px, 3vw, 48px) 20px clamp(10px, 1vw, 24px);
     display: flex;
     //   width: 100%;
     justify-content: space-between;
@@ -15,7 +17,7 @@
     cursor: pointer;
     flex: 0 0 200px;
     font-family: var(--font-poppins), sans-serif;
-    color: var(--color-violet);
+    // color: var(--color-violet);
     font-weight: bold;
     font-size: var(--fs-lg);
   }
@@ -27,6 +29,9 @@
     // max-width: 500px;
     // width: 100%;
     justify-content: space-between;
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
   &__navbar {
     display: flex;
@@ -42,7 +47,7 @@
   }
   &__separator {
     margin: 0 auto;
-    width: 100%;
+    width: calc(100% - 40px);
     color: var(--color-grey-two);
   }
 }

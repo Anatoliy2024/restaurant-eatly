@@ -1,4 +1,5 @@
 // import { Footer } from "@/components/Footer/Footer"
+import { Footer } from "@/components/Footer/Footer"
 import { Header } from "@/components/Header/Header"
 
 export default function InnerApp({
@@ -15,8 +16,12 @@ export default function InnerApp({
     // </div>
     <div className="innerAppContainer">
       <Header />
-      <div className="innerAppContainer__contentPage">{children}</div>
-      {/* <Footer /> */}
+      <div
+      //  className="innerAppContainer__contentPage"
+      >
+        {children}
+      </div>
+      <Footer />
     </div>
   )
 }

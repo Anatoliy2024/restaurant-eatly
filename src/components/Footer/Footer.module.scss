@@ -1,0 +1,56 @@
+.footer {
+  max-width: calc(1246px + 40px);
+  margin: 0 auto;
+  padding: clamp(20px, 3vw, 48px) 20px clamp(10px, 1vw, 24px);
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 29px;
+  }
+  &__logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &__navbar {
+    width: 456px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    color: var(--color-grey-four);
+  }
+  &__separator {
+    color: var(--color-grey-two);
+    padding-bottom: clamp(20px, 4vw, 57px);
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: clamp(20px, 5vw, 81px);
+  }
+  &__copiration {
+    color: var(--color-grey-four);
+  }
+  &__socialMedia {
+    width: 234px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    svg {
+      box-sizing: content-box;
+      padding: 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      color: var(--color-violet);
+      &:hover {
+        background: var(--color-violet-four);
+        color: var(--color-white);
+      }
+    }
+  }
+}
