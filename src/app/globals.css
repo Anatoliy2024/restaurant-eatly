@@ -9,6 +9,7 @@
   --color-violet-four: #5c4eae;
   --color-violet-five: #1c186c;
   --color-violet-six: #c5bfed;
+  --color-violet-seven: #dbd9ee;
   --color-grey: #969696;
   --color-grey-two: #cbcbcb;
   --color-grey-three: #201f1f33;
@@ -29,6 +30,10 @@
   --fs-title-lg: clamp(3rem, 2.3rem + 1.6vw, 4.375rem); /* 48 - 70 */
   --fs-hero: clamp(3.25rem, 2.5rem + 1.8vw, 4.75rem); /* 52 - 76 */
   /* 10 14  16 18 20 22px 24 26 28  44 50 70 76px   1440px  */
+
+  --width-basic: calc(1246px + 40px);
+  --margin-basic: 0 auto;
+  --padding-basic: clamp(20px, 8vw, 119px) 20px clamp(20px, 5vw, 85px);
 }
 
 .innerAppContainer {
@@ -41,4 +46,13 @@
 }
 .violetColor {
   color: var(--color-violet);
+}
+
+.separator {
+  max-width: var(--width-basic);
+  margin: var(--margin-basic);
+  /* padding: var(--padding-basic); */
+  /* margin: 0 auto;
+  max-width: calc(1246px + 40px); */
+  color: var(--color-grey-two);
 }

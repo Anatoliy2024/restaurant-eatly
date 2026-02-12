@@ -1,7 +1,10 @@
 .footer {
-  max-width: calc(1246px + 40px);
-  margin: 0 auto;
-  padding: clamp(20px, 3vw, 48px) 20px clamp(10px, 1vw, 24px);
+  // max-width: calc(1246px + 40px);
+  // margin: 0 auto;
+  // padding: clamp(20px, 3vw, 48px) 20px clamp(10px, 1vw, 24px);
+  max-width: var(--width-basic);
+  margin: var(--margin-basic);
+  // padding: var(--padding-basic);
   &__main {
     display: flex;
     justify-content: space-between;

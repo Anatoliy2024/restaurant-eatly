@@ -2,9 +2,12 @@ $point: 850px;
 .enjoy {
   display: flex;
   min-width: 607px;
-  max-width: calc(1246px + 40px);
-  margin: 0 auto;
-  padding: clamp(20px, 8vw, 119px) 20px clamp(20px, 5vw, 85px);
+  // max-width: calc(1246px + 40px);
+  // margin: 0 auto;
+  // padding: clamp(20px, 8vw, 119px) 20px clamp(20px, 5vw, 85px);
+  max-width: var(--width-basic);
+  margin: var(--margin-basic);
+  padding: var(--padding-basic);
   gap: 20px;
   @media (max-width: $point) {
     display: block;

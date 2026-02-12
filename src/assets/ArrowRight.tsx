@@ -1,4 +1,4 @@
-export function HeartRight() {
+export function ArrowRight() {
   return (
     <svg
       width="19"

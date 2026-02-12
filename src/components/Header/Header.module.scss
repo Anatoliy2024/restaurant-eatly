@@ -1,8 +1,11 @@
 .header {
-  max-width: calc(1246px + 40px);
+  // max-width: calc(1246px + 40px);
+  // margin: 0 auto;
+  max-width: var(--width-basic);
+  margin: var(--margin-basic);
+  // padding: var(--padding-basic);
 
   // max-width: 1248px;
-  margin: 0 auto;
   &__content {
     padding: clamp(20px, 3vw, 48px) 20px clamp(10px, 1vw, 24px);
     display: flex;
