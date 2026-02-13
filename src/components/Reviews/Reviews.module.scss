@@ -1,0 +1,47 @@
+.reviews {
+  user-select: none;
+}
+
+.slider {
+  position: relative;
+
+  &__mySwiper {
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+
+  &__mySlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    height: 150px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+  &__myPrev,
+  &__myNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  &__myPrev {
+    left: -40px;
+  }
+
+  &__myNext {
+    right: -40px;
+  }
+
+  &__scrollbar {
+    // color: red;
+  }
+}

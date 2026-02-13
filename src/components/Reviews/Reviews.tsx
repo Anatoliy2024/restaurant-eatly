@@ -1,18 +1,52 @@
+"use client"
 import { reviewsList, ReviewType } from "@/data/data"
 import style from "./Reviews.module.scss"
 import Image from "next/image"
 import { Quote } from "@/assets/Quote"
 import { Star } from "@/assets/Star"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import { Swiper, SwiperSlide } from "swiper/react"
+
+import { Navigation, Pagination, Scrollbar } from "swiper/modules" // <-- правильно
+
 export function Reviews() {
-  reviewsList
   return (
     <div className={style.reviews}>
       <h2>
         <span className="violetColor">Customer</span> Say
       </h2>
-      {reviewsList.map((review, i) => (
+      <div className={style.slider}>
+        <button className={style.slider__myPrev}>Назад</button>
+        <button className={style.slider__myNext}>Вперёд</button>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar]}
+          spaceBetween={20} // расстояние между слайдами
+          slidesPerView={4} // сколько элементов видно сразу
+          // navigation
+          navigation={{
+            nextEl: `.${style.slider__myNext}`,
+            prevEl: `.${style.slider__myPrev}`,
+          }}
+          // стрелки
+          // pagination={{ clickable: true, el: `.${style.slider__pagination}` }} // точки под слайдером
+          scrollbar={{
+            el: `.${style.slider__scrollbar}`,
+            draggable: true,
+          }}
+          className={style.slider__mySwiper}
+        >
+          {reviewsList.map((review) => (
+            <SwiperSlide key={review.id} className={style.slider__mySlide}>
+              <ReviewsItem review={review} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      {/* {reviewsList.map(review => (
         <ReviewsItem review={review} key={review.id} />
-      ))}
+      ))} */}
     </div>
   )
 }
