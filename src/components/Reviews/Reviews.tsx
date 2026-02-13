@@ -4,12 +4,13 @@ import style from "./Reviews.module.scss"
 import Image from "next/image"
 import { Quote } from "@/assets/Quote"
 import { Star } from "@/assets/Star"
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import { Swiper, SwiperSlide } from "swiper/react"
 
-import { Navigation, Pagination, Scrollbar } from "swiper/modules" // <-- правильно
+import "swiper/css"
+
+import "swiper/css/scrollbar"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Scrollbar } from "swiper/modules"
 
 export function Reviews() {
   return (
@@ -18,23 +19,15 @@ export function Reviews() {
         <span className="violetColor">Customer</span> Say
       </h2>
       <div className={style.slider}>
-        <button className={style.slider__myPrev}>Назад</button>
-        <button className={style.slider__myNext}>Вперёд</button>
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar]}
-          spaceBetween={20} // расстояние между слайдами
-          slidesPerView={4} // сколько элементов видно сразу
-          // navigation
-          navigation={{
-            nextEl: `.${style.slider__myNext}`,
-            prevEl: `.${style.slider__myPrev}`,
-          }}
-          // стрелки
-          // pagination={{ clickable: true, el: `.${style.slider__pagination}` }} // точки под слайдером
+          modules={[Scrollbar]}
+          spaceBetween={20}
+          slidesPerView="auto"
           scrollbar={{
             el: `.${style.slider__scrollbar}`,
             draggable: true,
           }}
+          grabCursor={true}
           className={style.slider__mySwiper}
         >
           {reviewsList.map((review) => (
@@ -43,10 +36,8 @@ export function Reviews() {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className={style.slider__scrollbar}></div>
       </div>
-      {/* {reviewsList.map(review => (
-        <ReviewsItem review={review} key={review.id} />
-      ))} */}
     </div>
   )
 }
@@ -67,7 +58,7 @@ function ReviewsItem({ review }: { review: ReviewType }) {
           <div className={style.reviewsItem__userInfo}>
             <div className={style.reviewsItem__username}>{review.username}</div>
             <div className={style.reviewsItem__withUs}>
-              {review.time}Year With Us{" "}
+              0{review.time} Year With Us
             </div>
           </div>
         </div>
@@ -75,8 +66,8 @@ function ReviewsItem({ review }: { review: ReviewType }) {
           <Quote />
         </div>
       </div>
-      <p className={style.reviewsItem__content}>{review.text}</p>
-      <div>
+      <p className={style.reviewsItem__content}>“ {review.text} ”</p>
+      <div className={style.reviewsItem__starsWrapper}>
         <StarRating stars={review.stars} />
       </div>
     </div>

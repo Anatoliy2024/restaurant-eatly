@@ -80,7 +80,7 @@ $point: 850px;
   &__ratingStars {
     display: flex;
     gap: 4px;
-    color: #f59e0b;
+    color: var(--color-orange);
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -92,8 +92,7 @@ $point: 850px;
     display: flex;
     align-items: center;
     justify-content: center;
-    // justify-content: flex-start; // НЕ center!
-    // margin: auto 0; // центрирует, но не обрезает
+
     @media (max-width: $point) {
       max-width: 100%;
     }
@@ -101,7 +100,7 @@ $point: 850px;
 
   &__imageOne {
     border-radius: 50%;
-    // background: var(--color-violet);
+
     border: 20px solid var(--color-violet);
     position: relative;
     svg {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import { Inter, Poppins, Public_Sans } from "next/font/google"
+import { Inter, Poppins, Public_Sans, Quicksand } from "next/font/google"
 import "./globals.css"
 
 const inter = Inter({
@@ -22,6 +22,13 @@ const publicSans = Public_Sans({
   display: "swap",
 })
 
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-quicksand",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   title: "Restaurant Early",
   description: "the best restaurant in the city",
@@ -35,7 +42,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} ${publicSans.variable} antialiased`}
+        className={`${inter.variable} 
+        ${poppins.variable} 
+        ${publicSans.variable}
+        ${quicksand.variable}
+         antialiased`}
       >
         {children}
       </body>

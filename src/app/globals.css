@@ -14,6 +14,7 @@
   --color-grey-two: #cbcbcb;
   --color-grey-three: #201f1f33;
   --color-grey-four: #676767;
+  --color-orange: #f59e0b;
 
   --fs-xs: clamp(0.625rem, 0.55rem + 0.3vw, 0.875rem); /* 10 - 14 */
   --fs-sm: clamp(0.75rem, 0.7rem + 0.35vw, 1rem); /* 12 - 16 */
